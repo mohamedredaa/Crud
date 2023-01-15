@@ -1,0 +1,57 @@
+<html>
+    <head>
+          <link rel="stylesheet" href="css/bootstrap.min.css">
+          <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+     
+         <div class="container  py-5">
+                 
+             <div class="form-group">
+                <label for="productNameInput">productName:</label>
+                <input type="text" class="form-control" id="productNameInput">
+             </div>
+           <div class="alert alert-dark d-none" id="userProductAlert">
+             <p>userName must start with uppercase and then from 3 to 8</p>
+           </div>
+             <div class="form-group">
+                <label for="productPriceInput">productPrice:</label>
+                <input type="number" class="form-control" id="productPriceInput">
+             </div>
+             <div class="form-group">
+                <label for="productCatgeoryInput">productCategory:</label>
+                <input type="text" class="form-control" id="productCatgeoryInput">
+             </div>
+             <div class="form-group">
+                <label for="productDescriptionInput">productDescription:</label>
+               <textarea  type="text" class="form-control" id="productDescriptionInput"></textarea>
+             </div>
+      
+
+
+         <button onclick="addProduct()" class="btn btn-outline-info">addProduct </button>
+         </div>
+
+          <div class="container">
+              <input onkeyup="searchProduct(this.value)" class="form-control w-75 m-auto " placeholder="searchProduct" type="text" name="" id="">
+              <table class="table mt-2">
+                  <thead>
+                      <th>index</th>
+                      <th>productName</th>
+                      <th>productPrice</th>
+                      <th>productCategory</th>
+                      <th>productDescription</th>
+                      <th>update</th>
+                      <th>delete</th>
+                  </thead>
+                  <tbody id="tableBody">
+              
+                  </tbody>
+              </table>
+          </div>
+
+
+          <script src="js/jquery-3.5.1.min.js"></script>
+          <script src="js/script.js"></script>
+    </body>
+</html>
